@@ -11,3 +11,4 @@ services:
       - ./index.html:/data/www/index.html
       - ./images:/data/images
       - ./javascript:/data/javascript
+      - ./stylesheet:/data/stylesheet
