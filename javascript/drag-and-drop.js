@@ -39,7 +39,7 @@ function onDragOver(ev) {
 function onDragLeave(ev) {
 	let target = ev.target;
 
-	target.style.background = '';
+	resetBackgroundColor(target);
 }
 
 function onDrop(ev) {
@@ -51,6 +51,7 @@ function onDrop(ev) {
 		return;
 	}
 	takeValidDot(dragged, target);
+	resetBackgroundColor(target);
 }
 
 function canAcceptDot(dot, target) {
@@ -66,6 +67,10 @@ function takeValidDot(dot, target) {
 
 function dropZoneHasDot(target) {
 	return target.children.length > 0 ? true : false;
+}
+
+function resetBackgroundColor(target) {
+	target.style.background = '';
 }
 
 function resetDots() {
