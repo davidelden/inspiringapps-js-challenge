@@ -1,0 +1,49 @@
+#module-wrapper {
+	display: inline-block;
+}
+
+#dot-wrapper {
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+	min-height: 7rem;
+}
+
+.dropzones {
+	position: relative;
+}
+
+.dropzone {
+	align-items: center;
+	border-radius: 4.25rem;
+	display: flex;
+	height: 8.5rem;
+	justify-content: center;
+	position: absolute;
+	width: 8.5rem;
+}
+
+#target1 {
+  left: 1.35rem;
+  top: 10.45rem;
+}
+
+#target2 {
+	left: 26.9rem;
+  top: 2.9rem;
+}
+
+#target3 {
+	left: 15.6rem;
+  top: 1.4rem;
+}
+
+#target4 {
+  left: 7.35rem;
+	top: 19.4rem;
+}
+
+#target5 {
+	left: 24.65rem;
+  top: 16.4rem;
+}
