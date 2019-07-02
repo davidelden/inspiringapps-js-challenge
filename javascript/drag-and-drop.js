@@ -1,7 +1,8 @@
-import { DotElements, DropZoneElements } from '/javascript/modules/LogoBuilderModule.js';
+import { DotElements, DropZoneElements, CongratulateUser } from '/javascript/modules/LogoBuilderModule.js';
 
 const dotElems = new DotElements,
 			dzElems = new DropZoneElements,
+			congrats = new CongratulateUser,
 			dots = dotElems.dots,
 			dropZoneRules = dzElems.dropZoneRules;
 
@@ -61,7 +62,11 @@ function canAcceptDot(dot, target) {
 }
 
 function takeValidDot(dot, target) {
-	canAcceptDot(dot, target) ? target.appendChild(document.getElementById(dot.id)) : null;
+	if (canAcceptDot(dot, target)) {
+		target.appendChild(document.getElementById(dot.id));
+		dots.dotCount--;
+	}
+	dots.dotCount === 0 ? congrats.insertCongratulations() : null;
 }
 
 function dropZoneHasDot(target) {
