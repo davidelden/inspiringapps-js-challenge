@@ -9,6 +9,16 @@
 	min-height: 7rem;
 }
 
+.dots img {
+	cursor: grab;
+	cursor: -webkit-grab;
+}
+
+.dots img:active {
+	cursor: grabbing;
+	cursor: -webkit-grabbing;
+}
+
 .dropzones {
 	position: relative;
 }
