@@ -45,4 +45,46 @@ class DotElements {
 		})
 	}
 }
- export { DotElements };
+
+class DropZoneElements {
+	constructor() {
+		this.dropZoneRules = {
+				target1: {
+					canAccept: 'black dot'
+				},
+				target2: {
+					canAccept: 'red dot'
+				},
+				target3: {
+					canAccept: 'blue dot'
+				},
+				target4: {
+					canAccept: 'green dot'
+				},
+				target5: {
+					canAccept: 'black dot'
+				},
+			}
+	}
+
+	buildDropZoneElem(id) {
+		let div = document.createElement('div');
+
+		div.setAttribute('id', id);
+		div.setAttribute('class', 'dropzone');
+
+		return div;
+	}
+
+	insertDropZones() {
+		let ids = Object.keys(this.dropZoneRules),
+				div = document.getElementById('dropzone-wrapper');
+
+		ids.forEach(id => {
+			let dz = this.buildDropZoneElem(id);
+
+			div.appendChild(dz);
+		})
+	}
+}
+ export { DotElements, DropZoneElements };
