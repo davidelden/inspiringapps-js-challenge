@@ -13,7 +13,6 @@ function onDragStart(ev) {
 
 	dragged = target;
 
-	ev.dataTransfer.effectAllowed = 'move';
 	ev.dataTransfer.setData('text/uri-list', imgSrc);
 	ev.dataTransfer.setData('text/plain', imgSrc);
 }
