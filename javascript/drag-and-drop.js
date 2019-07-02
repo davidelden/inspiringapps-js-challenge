@@ -78,6 +78,7 @@ function resetDots() {
 			dropZones = document.getElementsByClassName('dropzone');
 
 	dotWrapper.innerHTML = "";
+	dots.dotCount = 0;
 	dotElems.insertDots(dots.dotLayout);
 
 	for (var i = 0; i < dropZones.length; i++) {
