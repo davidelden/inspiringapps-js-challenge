@@ -1,6 +1,9 @@
-import { DotElements } from '/javascript/modules/LogoBuilderModule.js';
+import { DotElements, DropZoneElements } from '/javascript/modules/LogoBuilderModule.js';
 
 const dotElems = new DotElements,
-			dots = dotElems.dots;
+			dzElems = new DropZoneElements,
+			dots = dotElems.dots,
+			dropZoneRules = dzElems.dropZoneRules;
 
 dotElems.insertDots(dots.dotLayout);
+dzElems.insertDropZones();
