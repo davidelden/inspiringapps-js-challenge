@@ -87,4 +87,22 @@ class DropZoneElements {
 		})
 	}
 }
- export { DotElements, DropZoneElements };
+
+class CongratulateUser {
+	constructor() {
+		this.span = document.createElement('span');
+		this.span.innerText = 'Congratulations! You fixed the Innovative Apps logo!'
+	}
+
+	getSpan() {
+		return this.span;
+	}
+
+	insertCongratulations() {
+		let div = document.getElementById('dot-wrapper');
+
+		div.appendChild(this.getSpan());
+	}
+}
+
+ export { DotElements, DropZoneElements, CongratulateUser };
