@@ -47,3 +47,25 @@
 	left: 24.65rem;
   top: 16.4rem;
 }
+
+#reset {
+	background-color: dodgerblue;
+	border: none;
+	color: white;
+	float: right;
+	font-size: 1.25rem;
+	height: auto;
+	letter-spacing: 0.02rem;
+	padding: 0.25rem 1rem;
+	text-transform: uppercase;
+	width: auto;
+}
+
+#reset:focus {
+	outline: none;
+}
+
+#reset:hover {
+	background-color: cornflowerblue;
+	cursor: pointer;
+}
