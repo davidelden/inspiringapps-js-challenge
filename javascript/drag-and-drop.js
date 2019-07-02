@@ -18,11 +18,28 @@ function onDragStart(ev) {
 	ev.dataTransfer.setData('text/plain', imgSrc);
 }
 
+function onDragEnter(ev) {
+	let target = ev.target,
+			canAccept = canAcceptDot(dragged, target);
+
+	if (canAccept) {
+		target.style.background = 'rgba(0,255,0,0.25)';
+	} else {
+		target.style.background = 'rgba(255,0,0,0.25)';
+	}
+}
+
 function onDragOver(ev) {
 	let target = ev.target;
 
 	ev.preventDefault();
 	ev.dataTransfer.dropEffect = 'move';
+}
+
+function onDragLeave(ev) {
+	let target = ev.target;
+
+	target.style.background = '';
 }
 
 function onDrop(ev) {
@@ -34,6 +51,13 @@ function onDrop(ev) {
 		return;
 	}
 	takeValidDot(dragged, target);
+}
+
+function canAcceptDot(dot, target) {
+	if (target && target.nodeName == 'DIV') {
+		let canAccept = dropZoneRules[target.id]['canAccept'];
+		return canAccept === dot.alt ? true : false;
+	}
 }
 
 function takeValidDot(dot, target) {
@@ -68,7 +92,9 @@ function addEventListeners() {
 				reset = document.getElementById('reset');
 
 	dots.addEventListener('dragstart', onDragStart);
+	dropZone.addEventListener('dragenter', onDragEnter);
 	dropZone.addEventListener('dragover', onDragOver);
+	dropZone.addEventListener('dragleave', onDragLeave);
 	dropZone.addEventListener('drop', onDrop);
 	reset.addEventListener('click', resetDots);
 }
