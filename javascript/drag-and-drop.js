@@ -61,13 +61,7 @@ function canAcceptDot(dot, target) {
 }
 
 function takeValidDot(dot, target) {
-	if (dropZoneRules[target.id]) {
-		let canAccept = dropZoneRules[target.id]['canAccept'];
-
-		if (canAccept === dot.alt) {
-			target.appendChild(document.getElementById(dot.id));
-		}
-	}
+	canAcceptDot(dot, target) ? target.appendChild(document.getElementById(dot.id)) : null;
 }
 
 function dropZoneHasDot(target) {
