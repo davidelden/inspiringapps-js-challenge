@@ -99,6 +99,7 @@ function addEventListeners() {
 				reset = document.getElementById('reset');
 
 	dots.addEventListener('dragstart', onDragStart);
+	dropZone.addEventListener('dragstart', onDragStart);
 	dropZone.addEventListener('dragenter', onDragEnter);
 	dropZone.addEventListener('dragover', onDragOver);
 	dropZone.addEventListener('dragleave', onDragLeave);
