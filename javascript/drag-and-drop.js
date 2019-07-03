@@ -64,13 +64,16 @@ function canAcceptDot(dot, target) {
 function takeValidDot(dot, target) {
 	if (canAcceptDot(dot, target)) {
 		target.appendChild(document.getElementById(dot.id));
-		dots.dotCount--;
 	}
-	dots.dotCount === 0 ? congrats.insertCongratulations() : null;
+	dotCount() === 0 ? congrats.insertCongratulations() : null;
 }
 
 function dropZoneHasDot(target) {
 	return target.children.length > 0 ? true : false;
+}
+
+function dotCount() {
+	return document.getElementById('dot-wrapper').children.length;
 }
 
 function resetBackgroundColor(target) {
