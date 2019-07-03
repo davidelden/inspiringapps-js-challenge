@@ -91,7 +91,7 @@ class DropZoneElements {
 class CongratulateUser {
 	constructor() {
 		this.span = document.createElement('span');
-		this.span.innerText = 'Congratulations! You fixed the Innovative Apps logo!'
+		this.span.innerText = 'Congratulations! You fixed the Inspiring Apps logo!'
 	}
 
 	getSpan() {
