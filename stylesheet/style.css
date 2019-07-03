@@ -3,7 +3,9 @@ body, button {
 }
 
 #module-wrapper {
-	display: inline-block;
+	display: flex;
+	flex-flow: column wrap;
+	width: 600px;
 }
 
 #dot-wrapper {
@@ -71,13 +73,13 @@ body, button {
 	background-color: dodgerblue;
 	border: none;
 	color: white;
-	float: right;
 	font-size: 1.15rem;
 	height: auto;
 	letter-spacing: 0.02rem;
+	margin-left: auto;
 	padding: 0.35rem 1rem;
 	text-transform: uppercase;
-	width: auto;
+	width: 8rem;
 }
 
 #reset:focus {
